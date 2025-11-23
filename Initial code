@@ -10,7 +10,7 @@ public class MoodAnalyzer {
         
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("What is your current mood?");
+        System.out.println("What is your current mood? feature 2");
        
         String input = scanner.nextLine();
         
@@ -19,9 +19,9 @@ public class MoodAnalyzer {
 
         System.out.println("\nAnalyzing your input...");
         
-        if (SentenceInput.contains("happy")||SentenceInput.contains("great"))
+       if (SentenceInput.contains("happy")||SentenceInput.contains("great")||SentenceInput.contains("amazing")||SentenceInput.contains("blessed"))
             System.out.println("Mood is Positive");
-        else if (SentenceInput.contains("sad")||SentenceInput.contains("angry"))
+         else if (SentenceInput.contains("sad")||SentenceInput.contains("angry")||SentenceInput.contains("depressed")||SentenceInput.contains("crying")||SentenceInput.contains("down")||SentenceInput.contains("stressed"))
             System.out.println("Mood is Negative");
         else System.out.println("Mood is Neutrual");
     }
