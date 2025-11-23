@@ -31,17 +31,16 @@ public class MoodAnalyzer {
 
         System.out.println("\nAnalyzing your input...");
         
-        if (SentenceInput.contains("happy")||SentenceInput.contains("great")||SentenceInput.contains("good")){
-              if (isNegated) {
+
+       if (SentenceInput.contains("happy")||SentenceInput.contains("great")||SentenceInput.contains("amazing")||SentenceInput.contains("blessed"))
+            if (isNegated) {
         System.out.println("Mood is NEGATIVE");
-               } else {
-            System.out.println("Mood is Positive");}}
-              
-       else if (SentenceInput.contains("sad")||SentenceInput.contains("angry")){
-                if (isNegated) {
+               } else { 
+               System.out.println("Mood is Positive");}
+         else if (SentenceInput.contains("sad")||SentenceInput.contains("angry")||SentenceInput.contains("depressed")||SentenceInput.contains("crying")||SentenceInput.contains("down")||SentenceInput.contains("stressed"))
+            if (isNegated) {
                  System.out.println("Mood is NEUTRAL");
-              } else System.out.println("Mood is Negative");}
-                
-                else System.out.println("Mood is Neutrual");
+              } else  System.out.println("Mood is Negative");
+        else System.out.println("Mood is Neutrual");
     }
 }
