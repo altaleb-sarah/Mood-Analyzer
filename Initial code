@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author SARAH
+ */
+public class MoodAnalyzer {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("What is your current mood?");
+       
+        String input = scanner.nextLine();
+        
+        // Convert input to lowercase 
+        String SentenceInput = input.toLowerCase();
+
+        System.out.println("\nAnalyzing your input...");
+        
+        if (SentenceInput.contains("happy")||SentenceInput.contains("great"))
+            System.out.println("Mood is Positive");
+        else if (SentenceInput.contains("sad")||SentenceInput.contains("angry"))
+            System.out.println("Mood is Negative");
+        else System.out.println("Mood is Neutrual");
+    }
+}
