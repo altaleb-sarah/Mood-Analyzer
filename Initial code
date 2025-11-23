@@ -1,3 +1,5 @@
+package com.mycompany.moodanalyzer;
+
 import java.util.Scanner;
 
 /**
@@ -10,19 +12,36 @@ public class MoodAnalyzer {
         
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("What is your current mood?");
+        System.out.println("What is your current mood? feature 1");
        
         String input = scanner.nextLine();
         
         // Convert input to lowercase 
         String SentenceInput = input.toLowerCase();
+        
+        String[] negationWords = {"not", "never", "no", "n't", "wasn't", "isn't"};
+
+        boolean isNegated = false;
+        
+        for (String neg : negationWords) {
+        if (input.contains(neg)) {
+        isNegated = true;}}
+        
+        
 
         System.out.println("\nAnalyzing your input...");
         
-        if (SentenceInput.contains("happy")||SentenceInput.contains("great"))
-            System.out.println("Mood is Positive");
-        else if (SentenceInput.contains("sad")||SentenceInput.contains("angry"))
-            System.out.println("Mood is Negative");
-        else System.out.println("Mood is Neutrual");
+        if (SentenceInput.contains("happy")||SentenceInput.contains("great")||SentenceInput.contains("good")){
+              if (isNegated) {
+        System.out.println("Mood is NEGATIVE");
+               } else {
+            System.out.println("Mood is Positive");}}
+              
+       else if (SentenceInput.contains("sad")||SentenceInput.contains("angry")){
+                if (isNegated) {
+                 System.out.println("Mood is NEUTRAL");
+              } else System.out.println("Mood is Negative");}
+                
+                else System.out.println("Mood is Neutrual");
     }
 }
